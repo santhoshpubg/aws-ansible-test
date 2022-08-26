@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: install package
+      apt:
+        name: bridge-utils
+        state: latest
+
