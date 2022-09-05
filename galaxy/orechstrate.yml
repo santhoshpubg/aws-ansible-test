@@ -1,0 +1,4 @@
+- hosts: webservers
+  roles:
+          - role: "install-tomcat"
+          - role: "start-tomcat"

@@ -1,0 +1,6 @@
+- hosts: webservers
+  vars:
+    motd_value: "{{ lookup('file', '/etc/passwd') }}"
+  tasks:
+    - debug:
+        msg: "motd value is {{ motd_value }}"
