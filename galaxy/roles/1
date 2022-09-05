@@ -1,0 +1,14 @@
+---
+# tasks file for testrole
+-
+   block:
+      - name: Install Tomcat artifacts
+         action: >
+            apt name = "demo-tomcat-1" state = present
+         register: Output
+   always:
+      - debug:
+         msg:
+           - "Install Tomcat artifacts task ended with message: {{Output}}"
+           - - "Installed Tomcat artifacts - {{Output.changed}}" 
+...
